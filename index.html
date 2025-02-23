@@ -3,52 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Codespace</title>
     <link rel="stylesheet" href="alcantara.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-    <!-- header -->
+
+    <!-- Header -->
     <div class="header">
         <div class="left-nav">
-            <img class="site-logo" src="images/logo.png" alt="">
-            <h1 class="title">Codespace</h1>
+            <img class="site-logo" src="images/logo.png" alt="Site Logo">
+            <h1 class="title">Jasper Alcantara</h1>
         </div>
+
+        <!-- Burger Menu -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <img id="menu-icon" src="images/menu.svg" alt="Menu">
+        </div>
+
+        <!-- Navigation Menu -->
         <div class="right-nav">
             <a href="#">Home</a>
             <a href="#about">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
             <a class="hire-me" href="#">Hire Me</a>
         </div>
     </div>
-    <!--hero -->
+
+    <!-- Hero Section -->
     <div class="hero-section">
         <div class="hero-left">
-            <img class="hero" src="images/hero.png" alt="">
-            <img class="small-logo" src="images/relative.png" alt="">
+            <img class="hero" src="images/hero.png" alt="Hero Image">
+            
         </div>
         <div class="hero-right">
             <h1 class="hero-heading">Explore My <br> Portfolio</h1>
             <h2 class="hero-sub-heading">Discover My Expertise as a Full-Stack Developer</h2>
             <div class="button">
                 <button class="resume-btn">Resume</button>
-                <button class="contact-btn">Contact</button>
+                <button  class="contact-btn"><a href="#contact">Contact</a></button>
             </div>
             <p>Crafting Innovative Digital Solutions for Your Business</p>
         </div>
     </div>
-    <!-- about me -->
-     <div class="about-section" id="about">
+
+    <!-- About Me Section -->
+    <div class="about-section" id="about">
         <div class="about-me-background">
             <h1 class="about-me">ABOUT ME</h1>
-            <h2>Full-Stack Developer | IT Specialist </h2>
-            <p class="description">I am a highly skilled Full-Stack Developer with expertise in designing, developing, and maintaining web applications from front-end to back-end. With a strong foundation in IT, I have experience in system architecture, database management, and cloud technologies. My ability to troubleshoot, optimize performance, and implement security best practices ensures the reliability and efficiency of the applications I build.
-
-                I am passionate about creating user-friendly and scalable solutions, staying up to date with industry trends, and collaborating with teams to deliver high-quality digital products. Whether it's UI/UX design, server-side development, or API integrations, I bring a problem-solving mindset and a commitment to innovation in every project I work on.</p>
+            <h2>Full-Stack Developer | IT Specialist</h2>
+            <p class="description">
+                I am a highly skilled Full-Stack Developer with expertise in designing, developing, and maintaining 
+                web applications from front-end to back-end. With a strong foundation in IT, I have experience in 
+                system architecture, database management, and cloud technologies. My ability to troubleshoot, 
+                optimize performance, and implement security best practices ensures the reliability and efficiency 
+                of the applications I build.
+            </p>
         </div>
-     </div>
+    </div>
+    <!-- Projects Section -->
+    <div id="projects"></div>
+    <section class="projects-section">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>Short description of the project.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>Short description of the project.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>Short description of the project.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <img class="footer-logo" src="images/logo.png" alt="Site Logo">
+            <p class="footer-email">Email: jasperalcantara@email.com</p>
+            <p>@2025 Jasper Alcantara. All Right Reserved. </p>
+        </div>
+    </footer>
+
+
+
+    <!-- Burger Menu-->
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".right-nav");
+            const menuIcon = document.getElementById("menu-icon");
+
+            nav.classList.toggle("active");
+
+            if (nav.classList.contains("active")) {
+                menuIcon.src = "images/close.svg";
+            } else {
+                menuIcon.src = "images/menu.svg";
+            }
+        }
+    </script>
+
 </body>
 </html>
